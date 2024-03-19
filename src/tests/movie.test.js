@@ -49,7 +49,7 @@ test('PUT /movies/:id debe actualizar la pelicula por su id', async () => {
 });
 
 test('PUT /movies/:id con id incorrecto debe retornar 404 ', async () => {
-    const res = await request(app).put('/movies/-1/actors');
+    const res = await request(app).put('/movies/-1');
     expect(res.status).toBe(404);
 });
 
